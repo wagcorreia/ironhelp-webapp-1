@@ -2,9 +2,7 @@ import "./styles/Search.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/MuralCards.css";
 import LogoIron from "./images/logoIronhack.png";
-import DeleteHelp from "./DeleteHelp";
 import { Link } from "react-router-dom";
-import userEvent from "@testing-library/user-event";
 
 function MuralCards(props) {
   return (

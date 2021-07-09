@@ -1,7 +1,6 @@
 import { Component } from "react";
 import axios from "axios";
 import MuralCards from "./MuralCards";
-import DeleteHelp from "./DeleteHelp";
 
 class MyHelpsList extends Component {
   state = {

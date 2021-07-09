@@ -30,7 +30,7 @@ class EditPage extends Component {
   handleSubmit = async (event) => {
     event.preventDefault(); // Previne o comportamento padrão dos formulários, que é recarregar a página e enviar os dados através da URL
     try {
-      const postQuestion = await axios.put(
+      await axios.put(
         `https://sao-ironrest.herokuapp.com/ironhelp-webapp/${this.props.match.params.questionID}`,
         { ...this.state }
       );
