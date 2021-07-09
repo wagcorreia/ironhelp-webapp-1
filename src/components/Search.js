@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function Search(props) {
   return (
-    <div id="searchBar" className="container m-2">
+    <div id="searchBar" className="container m-3">
       <div className="form-outline">
         <input
           type="text"

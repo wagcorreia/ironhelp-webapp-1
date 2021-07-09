@@ -40,11 +40,11 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className="container">
         <form className="" onSubmit={this.handleSubmit}>
           <div className="field">
             <label className="">Name</label>
-            <div className="">
+            <div className="container">
               <input
                 name="name"
                 className=""
@@ -59,7 +59,7 @@ class Signup extends Component {
           <div className="field">
             <label className="label">Username</label>
 
-            <div className="">
+            <div className="container">
               <input
                 name="username"
                 className=""
@@ -72,7 +72,7 @@ class Signup extends Component {
             </div>
           </div>
 
-          <div className="">
+          <div className="container">
             <label className="">Email</label>
             <div className="">
               <input
@@ -87,7 +87,7 @@ class Signup extends Component {
             </div>
           </div>
 
-          <div className="">
+          <div className="container">
             <label className="">Password</label>
             <div className="">
               <input
@@ -103,21 +103,27 @@ class Signup extends Component {
           </div>
 
           <div className="field">
-            <div className="control">
+            <div className="control container">
               <label className="checkbox">
                 <input
+                  style={{
+                    padding: '5px',
+                    width: '6%',
+                    maxWidth: '800px',
+                  }}
+                  className="checkbox container"
                   onChange={this.handleChangeCheckbox}
                   type="checkbox"
                   name="termsAgreement"
                 />{' '}
-                So pra dizer que tem uns termos pra aceitar, marca ai!
+                <p> Aceito os termos e condições!</p>
               </label>
             </div>
           </div>
 
-          <div className="">
+          <div className="container">
             <div className="">
-              <button className="" type="submit">
+              <button className="btn btn-primary" type="submit">
                 Submit
               </button>
             </div>

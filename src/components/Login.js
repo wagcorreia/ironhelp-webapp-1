@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import history from '../history'
+import LogoIron from './images/logoIronhack.png'
+import './styles/Login.css'
 
 class Login extends Component {
   state = {
@@ -48,17 +50,22 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="">
-        <form className="" onSubmit={this.handleSubmit}>
+      <div className="container m-5 wrapper2 fadeInDown2">
+        <form id="formContent2" className="" onSubmit={this.handleSubmit}>
+          <img
+            src={LogoIron}
+            className="logoicon fadeIn2.first"
+            alt="Logo IronHack"
+          />
           <div className="">
             <label className="">Username</label>
 
-            <div className="">
+            <div className="fadeIn2.second">
               <input
                 name="username"
                 className=""
                 type="text"
-                placeholder="Username"
+                placeholder="Digite aqui seu usuário"
                 value={this.state.username}
                 onChange={this.handleChange}
               />
@@ -68,14 +75,14 @@ class Login extends Component {
             </div>
           </div>
 
-          <div className="">
+          <div className="fadeIn2.third">
             <label className="">Password</label>
-            <div className="">
+            <div className="fadeIn2.fourth">
               <input
                 name="password"
                 className=""
                 type="password"
-                placeholder="Password"
+                placeholder="Digite aqui seu Password"
                 value={this.state.password}
                 onChange={this.handleChange}
               />
@@ -86,16 +93,15 @@ class Login extends Component {
           </div>
 
           <div className="">
-            <div className="">
-              <button className="" type="submit">
-                Login
-              </button>
-            </div>
-            <div className="">
-              <button onClick={this.handleCancelButton} className="">
-                Cancel
-              </button>
-            </div>
+            <button className="btn btn-primary formFooter2" type="submit">
+              Login
+            </button>{' '}
+            <button
+              onClick={this.handleCancelButton}
+              className="btn btn-primary"
+            >
+              Cancel
+            </button>
           </div>
         </form>
       </div>
