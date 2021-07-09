@@ -1,8 +1,10 @@
-import './styles/Search.css'
+import "./styles/Search.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
-import './styles/MuralCards.css'
-import LogoIron from './images/logoIronhack.png'
-import DeleteHelp from './DeleteHelp'
+import "./styles/MuralCards.css";
+import LogoIron from "./images/logoIronhack.png";
+import DeleteHelp from "./DeleteHelp";
+import { Link } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
 
 function MuralCards(props) {
   return (
@@ -14,15 +16,15 @@ function MuralCards(props) {
           <div className="row">
             <div
               className="col-md-2  "
-              style={{ margin: '0px', padding: '0px' }}
+              style={{ margin: "0px", padding: "0px" }}
             >
               <img
                 style={{
-                  width: '80px',
-                  height: 'auto',
-                  marginTop: '12px',
-                  marginBottom: '5px',
-                  marginLeft: '10x',
+                  width: "80px",
+                  height: "auto",
+                  marginTop: "12px",
+                  marginBottom: "5px",
+                  marginLeft: "10x",
                 }}
                 src={LogoIron}
                 className="img img-rounded img-fluid"
@@ -32,21 +34,37 @@ function MuralCards(props) {
             </div>
             <div className="col-md-10">
               <p>
-                <a className="" href="#">
-                  <strong>Autor</strong>
-                </a>{' '}
+                <strong>Autor</strong>
               </p>
 
               <p className="fadeIn.second">
                 {/* abaixo o texto do corpo da pergunta da API */}
                 {props.body}
               </p>
+              {props.user ? (
+                <div>
+                  <Link
+                    to={`/${props.user}/edit/${props.id}`}
+                    className="btn btn-primary"
+                  >
+                    Edit
+                  </Link>{" "}
+                  <Link
+                    to={`/${props.user}/deleteQuestion/${props.id}`}
+                    className="btn btn-danger"
+                  >
+                    Delete
+                  </Link>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default MuralCards
+export default MuralCards;

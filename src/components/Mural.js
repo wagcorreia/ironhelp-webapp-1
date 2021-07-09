@@ -58,7 +58,11 @@ class Mural extends Component {
           {this.state.questionData.map((element, i) => {
             return (
               // aqui retorna o componente com props e os cards com as perguntas
-              <MuralCards title={element.title} body={element.body} />
+              <MuralCards
+                title={element.title}
+                body={element.body}
+                id={element._id}
+              />
             );
           })}
         </div>

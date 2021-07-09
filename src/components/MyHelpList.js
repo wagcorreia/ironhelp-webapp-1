@@ -24,11 +24,13 @@ class MyHelpsList extends Component {
     return (
       <div>
         {myHelps.map((element) => {
+          console.log(element.user);
           return (
             <MuralCards
               title={element.title}
               body={element.body}
-              DeleteHelp={this.props.DeleteHelp} //botao deletar pergunta vinda da props da função deleteHelp do componente DeleteHelp
+              id={element._id}
+              user={element.user}
             />
           );
         })}

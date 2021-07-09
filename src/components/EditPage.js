@@ -2,7 +2,7 @@ import { Component } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 
-class CreateHelpForm extends Component {
+class EditPage extends Component {
   state = {
     title: "",
     body: "",
@@ -15,26 +15,25 @@ class CreateHelpForm extends Component {
   };
 
   // Envia os dados para a API quando acontece o evento 'submit', que é disparado quando o usuário aciona um botão com 'type' submit dentro de um formulário
+  componentDidMount = async () => {
+    try {
+      const postQuestion = await axios.get(
+        `https://sao-ironrest.herokuapp.com/ironhelp-webapp/${this.props.match.params.questionID}`
+      );
+      const { _id, ...questionToUpdate } = postQuestion.data;
+      this.setState({ ...questionToUpdate });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   handleSubmit = async (event) => {
     event.preventDefault(); // Previne o comportamento padrão dos formulários, que é recarregar a página e enviar os dados através da URL
     try {
-      const postQuestion = await axios.post(
-        "https://sao-ironrest.herokuapp.com/ironhelp-webapp",
-        this.state
+      const postQuestion = await axios.put(
+        `https://sao-ironrest.herokuapp.com/ironhelp-webapp/${this.props.match.params.questionID}`,
+        { ...this.state }
       );
-      const user = await axios.get(
-        `https://sao-ironrest.herokuapp.com/ironhelp-webapp-users/${this.state.user}`
-      );
-      console.log(user);
-      const newQuestion = [
-        ...user.data.questions,
-        postQuestion.data.ops[0]._id,
-      ];
-      await axios.put(
-        `https://sao-ironrest.herokuapp.com/ironhelp-webapp-users/${this.state.user}`,
-        { questions: newQuestion }
-      );
-      console.log(postQuestion.data.ops[0]._id);
     } catch (err) {
       console.error(err);
     }
@@ -82,4 +81,4 @@ class CreateHelpForm extends Component {
   }
 }
 
-export default CreateHelpForm;
+export default EditPage;

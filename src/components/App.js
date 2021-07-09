@@ -1,25 +1,26 @@
-import React, { Component } from 'react'
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import history from '../history'
+import React, { Component } from "react";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import history from "../history";
 
-import Navbar from './Navbar'
-import MyHelps from './MyHelps'
-import Mural from './Mural'
-import Login from './Login'
-import Signup from './Signup'
-import CreateHelpForm from './CreateHelpForm'
-import DeleteHelp from './DeleteHelp'
+import Navbar from "./Navbar";
+import MyHelps from "./MyHelps";
+import Mural from "./Mural";
+import Login from "./Login";
+import Signup from "./Signup";
+import CreateHelpForm from "./CreateHelpForm";
+import DeleteHelp from "./DeleteHelp";
+import EditPage from "./EditPage";
 
 class App extends Component {
   state = {
     isLogedIn: false,
-    id: '',
-  }
+    id: "",
+  };
 
   handleLogIn = (isLogedIn, id) => {
-    this.setState({ isLogedIn: isLogedIn, id: id })
-  }
+    this.setState({ isLogedIn: isLogedIn, id: id });
+  };
   render() {
     return (
       <Router history={history}>
@@ -30,7 +31,7 @@ class App extends Component {
             exact
             path="/Login"
             render={(props) => {
-              return <Login {...props} handleLogIn={this.handleLogIn} />
+              return <Login {...props} handleLogIn={this.handleLogIn} />;
             }}
           />
           <Route exact path="/:id/CreateHelpsForm" component={CreateHelpForm} />
@@ -38,7 +39,7 @@ class App extends Component {
             exact
             path="/Signup"
             render={(props) => {
-              return <Signup {...props} handleLogIn={this.handleLogIn} />
+              return <Signup {...props} handleLogIn={this.handleLogIn} />;
             }}
           />
           <Route exact path="/" component={Mural} />
@@ -46,13 +47,14 @@ class App extends Component {
             path="/:userID/deleteQuestion/:questionID"
             component={DeleteHelp}
           />
+          <Route path="/:userID/edit/:questionID" component={EditPage} />
         </Switch>
       </Router>
-    )
+    );
   }
 }
 
-export default App
+export default App;
 
 // function App() {
 //   return (
