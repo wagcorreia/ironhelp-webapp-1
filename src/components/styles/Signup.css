@@ -28,7 +28,7 @@ a {
 
 /* STRUCTURE */
 
-.wrapper2 {
+.wrapper3 {
   display: flex;
   height: 120vh;
   text-align: center;
@@ -39,13 +39,13 @@ a {
   margin: 2%;
 }
 
-#formContent2 {
+#formContent3 {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
   background: #fff;
   padding: 30px;
   width: 55%;
-  max-width: 450px;
+  max-width: 800px;
   position: relative;
   padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
@@ -53,7 +53,7 @@ a {
   text-align: center;
 }
 
-#formFooter2 {
+#formFooter3 {
   background-color: #f6f6f6;
   border-top: 1px solid #dce8f1;
   padding: 25px;
@@ -65,13 +65,13 @@ a {
 /* TABS */
 
 /* h2.inactive {
-  color: #cccccc;
-}
-
-h2.active {
-  color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
-} */
+    color: #cccccc;
+  }
+  
+  h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+  } */
 
 /* FORM TYPOGRAPHY*/
 
@@ -137,18 +137,18 @@ button[type='text'] {
 }
 
 /* input[type='text']:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
-}
-
-input[type='text']:placeholder {
-  color: #cccccc;
-} */
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  input[type='text']:placeholder {
+    color: #cccccc;
+  } */
 
 /* ANIMATIONS */
 
 /* Simple CSS3 Fade-in-down Animation */
-.fadeInDown2 {
+.fadeInDown3 {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   -webkit-animation-duration: 1s;
@@ -209,7 +209,7 @@ input[type='text']:placeholder {
   }
 }
 
-.fadeIn2 {
+.fadeIn3 {
   opacity: 0;
   -webkit-animation: fadeIn ease-in 1;
   -moz-animation: fadeIn ease-in 1;
@@ -224,25 +224,25 @@ input[type='text']:placeholder {
   animation-duration: 1s;
 }
 
-.fadeIn2.first {
+.fadeIn3.first {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
 
-.fadeIn2.second {
+.fadeIn3.second {
   -webkit-animation-delay: 0.6s;
   -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
-.fadeIn2.third {
+.fadeIn3.third {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
-.fadeIn2.fourth {
+.fadeIn3.fourth {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
@@ -275,8 +275,8 @@ input[type='text']:placeholder {
 }
 
 /* #icon {
-  display: flex;
-  width: 20%;
-
-  right: 10px;
-} */
+    display: flex;
+    width: 20%;
+  
+    right: 10px;
+  } */

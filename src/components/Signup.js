@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import history from '../history'
+import './styles/Signup.css'
 
 class Signup extends Component {
   state = {
@@ -40,9 +41,9 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className="container">
-        <form className="" onSubmit={this.handleSubmit}>
-          <div className="field">
+      <div className="container wrapper3 fadeInDown3">
+        <form className="formContent3" onSubmit={this.handleSubmit}>
+          <div className="field fadeIn3 fadeIn3.first">
             <label className="">Name</label>
             <div className="container">
               <input
@@ -56,7 +57,7 @@ class Signup extends Component {
             </div>
           </div>
 
-          <div className="field">
+          <div className="field fadeIn3.second">
             <label className="label">Username</label>
 
             <div className="container">
@@ -72,7 +73,7 @@ class Signup extends Component {
             </div>
           </div>
 
-          <div className="container">
+          <div className="container fadeIn3.third">
             <label className="">Email</label>
             <div className="">
               <input
@@ -101,34 +102,34 @@ class Signup extends Component {
               <span className=""></span>
             </div>
           </div>
-
-          <div className="field">
-            <div className="control container">
-              <label className="checkbox">
-                <input
-                  style={{
-                    padding: '5px',
-                    width: '6%',
-                    maxWidth: '800px',
-                  }}
-                  className="checkbox container"
-                  onChange={this.handleChangeCheckbox}
-                  type="checkbox"
-                  name="termsAgreement"
-                />{' '}
-                <p> Aceito os termos e condições!</p>
-              </label>
-            </div>
-          </div>
-
-          <div className="container">
-            <div className="">
-              <button className="btn btn-primary" type="submit">
-                Submit
-              </button>
-            </div>
-          </div>
         </form>
+        <div className="field">
+          <div className="control container formFooter3">
+            <label className="checkbox">
+              <input
+                style={{
+                  padding: '5px',
+                  width: '6%',
+                  maxWidth: '800px',
+                  textAlign: 'right',
+                }}
+                className="checkbox container"
+                onChange={this.handleChangeCheckbox}
+                type="checkbox"
+                name="termsAgreement"
+              />{' '}
+              <p> Aceito os termos e condições!</p>
+            </label>
+          </div>
+        </div>
+
+        <div className="container fadeIn3.fourth">
+          <div className="">
+            <button className="btn btn-primary" type="submit">
+              Submit
+            </button>
+          </div>
+        </div>
       </div>
     )
   }

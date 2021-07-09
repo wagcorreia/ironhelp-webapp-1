@@ -50,7 +50,8 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="container m-5 wrapper2 fadeInDown2">
+      // carregando container com efeito de fadinDown com bloco de login
+      <div className="container wrapper2 fadeInDown2">
         <form id="formContent2" className="" onSubmit={this.handleSubmit}>
           <img
             src={LogoIron}
@@ -66,7 +67,7 @@ class Login extends Component {
                 className=""
                 type="text"
                 placeholder="Digite aqui seu usuário"
-                value={this.state.username}
+                value={this.state.username} //pegando valor do username digitado
                 onChange={this.handleChange}
               />
               <span className="">
@@ -83,7 +84,7 @@ class Login extends Component {
                 className=""
                 type="password"
                 placeholder="Digite aqui seu Password"
-                value={this.state.password}
+                value={this.state.password} // pegando valor do passoword
                 onChange={this.handleChange}
               />
               <span className="">
